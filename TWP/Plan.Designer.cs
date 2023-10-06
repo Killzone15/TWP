@@ -1,4 +1,4 @@
-﻿namespace WPandCPL
+﻿namespace TWP
 {
     partial class Plan
     {
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Plan));
-            this.OtdelBox = new System.Windows.Forms.ComboBox();
-            this.Sem_comboBox = new System.Windows.Forms.ComboBox();
-            this.NumGr_comboBox = new System.Windows.Forms.ComboBox();
-            this.Prep_comboBox = new System.Windows.Forms.ComboBox();
-            this.Dis_comboBox = new System.Windows.Forms.ComboBox();
+            this.OtdelComboBox = new System.Windows.Forms.ComboBox();
+            this.SemestrComboBox = new System.Windows.Forms.ComboBox();
+            this.NumberGroupComboBox = new System.Windows.Forms.ComboBox();
+            this.PrepComboBox = new System.Windows.Forms.ComboBox();
+            this.DisciplineComboBox = new System.Windows.Forms.ComboBox();
             this.lbl_Otdel = new System.Windows.Forms.Label();
             this.lbl_Sem = new System.Windows.Forms.Label();
             this.lbl_NumGr = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.lbl_VidZan = new System.Windows.Forms.Label();
             this.VidZanBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.lvlassimilation_comboBox = new System.Windows.Forms.ComboBox();
+            this.LevelAssimilationComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,66 +81,66 @@
             // 
             // OtdelBox
             // 
-            this.OtdelBox.DisplayMember = "1";
-            this.OtdelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.OtdelBox.FormattingEnabled = true;
-            this.OtdelBox.Location = new System.Drawing.Point(26, 57);
-            this.OtdelBox.Name = "OtdelBox";
-            this.OtdelBox.Size = new System.Drawing.Size(121, 21);
-            this.OtdelBox.TabIndex = 1;
-            this.OtdelBox.DropDown += new System.EventHandler(this.OtdelBox_DropDown);
-            this.OtdelBox.SelectedIndexChanged += new System.EventHandler(this.OtdelBox_SelectedIndexChanged);
+            this.OtdelComboBox.DisplayMember = "1";
+            this.OtdelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.OtdelComboBox.FormattingEnabled = true;
+            this.OtdelComboBox.Location = new System.Drawing.Point(26, 57);
+            this.OtdelComboBox.Name = "OtdelBox";
+            this.OtdelComboBox.Size = new System.Drawing.Size(121, 21);
+            this.OtdelComboBox.TabIndex = 1;
+            this.OtdelComboBox.DropDown += new System.EventHandler(this.OtdelComboBoxDropDown);
+            this.OtdelComboBox.SelectedIndexChanged += new System.EventHandler(this.OtdelBox_SelectedIndexChanged);
             // 
             // Sem_comboBox
             // 
-            this.Sem_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Sem_comboBox.Enabled = false;
-            this.Sem_comboBox.FormattingEnabled = true;
-            this.Sem_comboBox.Location = new System.Drawing.Point(194, 57);
-            this.Sem_comboBox.Name = "Sem_comboBox";
-            this.Sem_comboBox.Size = new System.Drawing.Size(78, 21);
-            this.Sem_comboBox.TabIndex = 2;
-            this.Sem_comboBox.DropDown += new System.EventHandler(this.Sem_comboBox_DropDown);
-            this.Sem_comboBox.SelectedIndexChanged += new System.EventHandler(this.Sem_comboBox_SelectedIndexChanged);
+            this.SemestrComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SemestrComboBox.Enabled = false;
+            this.SemestrComboBox.FormattingEnabled = true;
+            this.SemestrComboBox.Location = new System.Drawing.Point(194, 57);
+            this.SemestrComboBox.Name = "Sem_comboBox";
+            this.SemestrComboBox.Size = new System.Drawing.Size(78, 21);
+            this.SemestrComboBox.TabIndex = 2;
+            this.SemestrComboBox.DropDown += new System.EventHandler(this.SemestrComboBoxDropDown);
+            this.SemestrComboBox.SelectedIndexChanged += new System.EventHandler(this.Sem_comboBox_SelectedIndexChanged);
             // 
             // NumGr_comboBox
             // 
-            this.NumGr_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NumGr_comboBox.Enabled = false;
-            this.NumGr_comboBox.FormattingEnabled = true;
-            this.NumGr_comboBox.Items.AddRange(new object[] {
+            this.NumberGroupComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NumberGroupComboBox.Enabled = false;
+            this.NumberGroupComboBox.FormattingEnabled = true;
+            this.NumberGroupComboBox.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.NumGr_comboBox.Location = new System.Drawing.Point(318, 57);
-            this.NumGr_comboBox.Name = "NumGr_comboBox";
-            this.NumGr_comboBox.Size = new System.Drawing.Size(121, 21);
-            this.NumGr_comboBox.TabIndex = 3;
-            this.NumGr_comboBox.DropDown += new System.EventHandler(this.NumGr_comboBox_DropDown);
-            this.NumGr_comboBox.SelectedIndexChanged += new System.EventHandler(this.NumGr_comboBox_SelectedIndexChanged);
+            this.NumberGroupComboBox.Location = new System.Drawing.Point(318, 57);
+            this.NumberGroupComboBox.Name = "NumGr_comboBox";
+            this.NumberGroupComboBox.Size = new System.Drawing.Size(121, 21);
+            this.NumberGroupComboBox.TabIndex = 3;
+            this.NumberGroupComboBox.DropDown += new System.EventHandler(this.NumberGroupComboBoxDropDown);
+            this.NumberGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.NumGr_comboBox_SelectedIndexChanged);
             // 
             // Prep_comboBox
             // 
-            this.Prep_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Prep_comboBox.Enabled = false;
-            this.Prep_comboBox.FormattingEnabled = true;
-            this.Prep_comboBox.Location = new System.Drawing.Point(485, 57);
-            this.Prep_comboBox.Name = "Prep_comboBox";
-            this.Prep_comboBox.Size = new System.Drawing.Size(167, 21);
-            this.Prep_comboBox.TabIndex = 4;
-            this.Prep_comboBox.DropDown += new System.EventHandler(this.Prep_comboBox_DropDown_1);
-            this.Prep_comboBox.SelectedIndexChanged += new System.EventHandler(this.Prep_comboBox_SelectedIndexChanged);
+            this.PrepComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PrepComboBox.Enabled = false;
+            this.PrepComboBox.FormattingEnabled = true;
+            this.PrepComboBox.Location = new System.Drawing.Point(485, 57);
+            this.PrepComboBox.Name = "Prep_comboBox";
+            this.PrepComboBox.Size = new System.Drawing.Size(167, 21);
+            this.PrepComboBox.TabIndex = 4;
+            this.PrepComboBox.DropDown += new System.EventHandler(this.PrepComboBoxDropDown);
+            this.PrepComboBox.SelectedIndexChanged += new System.EventHandler(this.Prep_comboBox_SelectedIndexChanged);
             // 
             // Dis_comboBox
             // 
-            this.Dis_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Dis_comboBox.Enabled = false;
-            this.Dis_comboBox.FormattingEnabled = true;
-            this.Dis_comboBox.Location = new System.Drawing.Point(685, 57);
-            this.Dis_comboBox.Name = "Dis_comboBox";
-            this.Dis_comboBox.Size = new System.Drawing.Size(211, 21);
-            this.Dis_comboBox.TabIndex = 5;
-            this.Dis_comboBox.DropDown += new System.EventHandler(this.Dis_comboBox_DropDown);
-            this.Dis_comboBox.SelectedIndexChanged += new System.EventHandler(this.Dis_comboBox_SelectedIndexChanged);
+            this.DisciplineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DisciplineComboBox.Enabled = false;
+            this.DisciplineComboBox.FormattingEnabled = true;
+            this.DisciplineComboBox.Location = new System.Drawing.Point(685, 57);
+            this.DisciplineComboBox.Name = "Dis_comboBox";
+            this.DisciplineComboBox.Size = new System.Drawing.Size(211, 21);
+            this.DisciplineComboBox.TabIndex = 5;
+            this.DisciplineComboBox.DropDown += new System.EventHandler(this.DisciplineComboBoxDropDown);
+            this.DisciplineComboBox.SelectedIndexChanged += new System.EventHandler(this.Dis_comboBox_SelectedIndexChanged);
             // 
             // lbl_Otdel
             // 
@@ -152,7 +152,7 @@
             this.lbl_Otdel.Size = new System.Drawing.Size(82, 17);
             this.lbl_Otdel.TabIndex = 6;
             this.lbl_Otdel.Text = "Отделение";
-            this.lbl_Otdel.Click += new System.EventHandler(this.lbl_Otdel_Click);
+            
             // 
             // lbl_Sem
             // 
@@ -164,7 +164,7 @@
             this.lbl_Sem.Size = new System.Drawing.Size(64, 17);
             this.lbl_Sem.TabIndex = 7;
             this.lbl_Sem.Text = "Семестр";
-            this.lbl_Sem.Click += new System.EventHandler(this.lbl_Sem_Click);
+            
             // 
             // lbl_NumGr
             // 
@@ -176,7 +176,7 @@
             this.lbl_NumGr.Size = new System.Drawing.Size(101, 17);
             this.lbl_NumGr.TabIndex = 8;
             this.lbl_NumGr.Text = "Номер группы";
-            this.lbl_NumGr.Click += new System.EventHandler(this.lbl_NumGr_Click);
+            
             // 
             // lbl_Prep
             // 
@@ -188,7 +188,7 @@
             this.lbl_Prep.Size = new System.Drawing.Size(111, 17);
             this.lbl_Prep.TabIndex = 9;
             this.lbl_Prep.Text = "Преподаватель";
-            this.lbl_Prep.Click += new System.EventHandler(this.lbl_Prep_Click);
+            
             // 
             // label6
             // 
@@ -200,7 +200,7 @@
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Дисциплина";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+           
             // 
             // lbl_NameRasd
             // 
@@ -273,7 +273,7 @@
             this.Exit.TabIndex = 17;
             this.Exit.Text = "Выход";
             this.Exit.UseVisualStyleBackColor = true;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            this.Exit.Click += new System.EventHandler(this.ExitClick);
             // 
             // lbl_ZadObuj
             // 
@@ -339,17 +339,17 @@
             // 
             // lvlassimilation_comboBox
             // 
-            this.lvlassimilation_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lvlassimilation_comboBox.Enabled = false;
-            this.lvlassimilation_comboBox.FormattingEnabled = true;
-            this.lvlassimilation_comboBox.Items.AddRange(new object[] {
+            this.LevelAssimilationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LevelAssimilationComboBox.Enabled = false;
+            this.LevelAssimilationComboBox.FormattingEnabled = true;
+            this.LevelAssimilationComboBox.Items.AddRange(new object[] {
             "Ознакомительный",
             "Репродуктивны",
             "Продуктивный"});
-            this.lvlassimilation_comboBox.Location = new System.Drawing.Point(167, 353);
-            this.lvlassimilation_comboBox.Name = "lvlassimilation_comboBox";
-            this.lvlassimilation_comboBox.Size = new System.Drawing.Size(121, 21);
-            this.lvlassimilation_comboBox.TabIndex = 23;
+            this.LevelAssimilationComboBox.Location = new System.Drawing.Point(167, 353);
+            this.LevelAssimilationComboBox.Name = "lvlassimilation_comboBox";
+            this.LevelAssimilationComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LevelAssimilationComboBox.TabIndex = 23;
             // 
             // label11
             // 
@@ -649,7 +649,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.lvlassimilation_comboBox);
+            this.Controls.Add(this.LevelAssimilationComboBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.VidZanBox);
             this.Controls.Add(this.lbl_VidZan);
@@ -667,11 +667,11 @@
             this.Controls.Add(this.lbl_NumGr);
             this.Controls.Add(this.lbl_Sem);
             this.Controls.Add(this.lbl_Otdel);
-            this.Controls.Add(this.Dis_comboBox);
-            this.Controls.Add(this.Prep_comboBox);
-            this.Controls.Add(this.NumGr_comboBox);
-            this.Controls.Add(this.Sem_comboBox);
-            this.Controls.Add(this.OtdelBox);
+            this.Controls.Add(this.DisciplineComboBox);
+            this.Controls.Add(this.PrepComboBox);
+            this.Controls.Add(this.NumberGroupComboBox);
+            this.Controls.Add(this.SemestrComboBox);
+            this.Controls.Add(this.OtdelComboBox);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -702,7 +702,7 @@
         private System.Windows.Forms.Label lbl_VidZan;
         private System.Windows.Forms.ComboBox VidZanBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox lvlassimilation_comboBox;
+        private System.Windows.Forms.ComboBox LevelAssimilationComboBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -714,11 +714,11 @@
         private System.Windows.Forms.TextBox VolumeAuditHours_textBox;
         private System.Windows.Forms.TextBox VolumeSelfHours_textBox;
         private System.Windows.Forms.ListBox Dob_listBox;
-        public System.Windows.Forms.ComboBox OtdelBox;
-        public System.Windows.Forms.ComboBox Sem_comboBox;
-        public System.Windows.Forms.ComboBox NumGr_comboBox;
-        public System.Windows.Forms.ComboBox Dis_comboBox;
-        public System.Windows.Forms.ComboBox Prep_comboBox;
+        public System.Windows.Forms.ComboBox OtdelComboBox;
+        public System.Windows.Forms.ComboBox SemestrComboBox;
+        public System.Windows.Forms.ComboBox NumberGroupComboBox;
+        public System.Windows.Forms.ComboBox DisciplineComboBox;
+        public System.Windows.Forms.ComboBox PrepComboBox;
         private System.Windows.Forms.TextBox textBox_Ot;
         private System.Windows.Forms.TextBox textBox_Do;
         public System.Windows.Forms.Button Dob_Dis;

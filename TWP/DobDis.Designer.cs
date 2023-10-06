@@ -1,4 +1,4 @@
-﻿namespace WPandCPL
+﻿namespace TWP
 {
     partial class DobDis
     {
@@ -161,7 +161,7 @@
             this.NameDisDobDis_textBox.Name = "NameDisDobDis_textBox";
             this.NameDisDobDis_textBox.Size = new System.Drawing.Size(145, 87);
             this.NameDisDobDis_textBox.TabIndex = 10;
-            this.NameDisDobDis_textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // lbl_CountHour
             // 

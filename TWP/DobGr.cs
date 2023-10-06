@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
-namespace WPandCPL
+namespace TWP
 {
     public partial class DobGr : Form
     {

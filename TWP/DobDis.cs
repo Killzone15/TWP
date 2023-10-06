@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 using MySql.Data;
 
 
-namespace WPandCPL
+namespace TWP
 {
     public partial class DobDis : Form
     {
@@ -18,12 +18,6 @@ namespace WPandCPL
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_ClearDobDis_Click(object sender, EventArgs e)
         {
             NameDisDobDis_textBox.Text = "";
@@ -48,9 +42,9 @@ namespace WPandCPL
             MySqlConnectionStringBuilder mysqlCSB; //Создаем объект класса MySQLConnectionStringBuilder
             mysqlCSB = new MySqlConnectionStringBuilder();
             mysqlCSB.Server = "localhost";//Сервер на котором находится база данных к которомой на необходимо подключиться
-            mysqlCSB.Database = "Diplom";//Имя базы данных которая нам необходима
+            mysqlCSB.Database = "twp";//Имя базы данных которая нам необходима
             mysqlCSB.UserID = "root";//Имя пользователя MySQL
-            mysqlCSB.Password = "";//Пароль пользователя MySQL
+            mysqlCSB.Password = "1234";//Пароль пользователя MySQL
             mysqlCSB.CharacterSet = "cp866";//Используем кодировку для киррилицы cp866
 
             MySqlConnection con = new MySqlConnection();//Создаем объект для подключения к СУБД MySQL

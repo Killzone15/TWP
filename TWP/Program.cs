@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 
-namespace WPandCPL
+namespace TWP
 {
     static class Program
     {

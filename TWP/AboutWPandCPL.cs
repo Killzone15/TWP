@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace WPandCPL
+namespace TWP
 {
     partial class AboutWPL : Form
     {

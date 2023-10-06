@@ -15,7 +15,7 @@ using System.Reflection;
 
 
 
-namespace WPandCPL
+namespace TWP
 {
     public partial class Table : Form
     {
@@ -31,9 +31,9 @@ namespace WPandCPL
             MySqlConnectionStringBuilder mysqlCSB;
             mysqlCSB = new MySqlConnectionStringBuilder();
             mysqlCSB.Server = "localhost";//Сервер на котором находится база данных к которомой на необходимо подключиться
-            mysqlCSB.Database = "Diplom";//Имя базы данных которая нам необходима
+            mysqlCSB.Database = "twp";//Имя базы данных которая нам необходима
             mysqlCSB.UserID = "root";//Имя пользователя MySQL
-            mysqlCSB.Password = "123";//Пароль пользователя MySQL
+            mysqlCSB.Password = "1234";//Пароль пользователя MySQL
             mysqlCSB.CharacterSet = "utf8";//Используем кодировку для киррилицы utf8
 
             MySqlConnection con = new MySqlConnection();//Создаем объект для подключения к СУБД MySQL
@@ -57,18 +57,18 @@ namespace WPandCPL
         {
             DataTable dt = new DataTable();
             Plan main = this.Owner as Plan;
-            string Otdel = main.OtdelBox.Text;
-            string Sem = main.Sem_comboBox.Text;
-            string NumGr = main.NumGr_comboBox.Text;
-            string Prep = main.Prep_comboBox.Text;
-            string Dis = main.Dis_comboBox.Text;
+            string Otdel = main.OtdelComboBox.Text;
+            string Sem = main.SemestrComboBox.Text;
+            string NumGr = main.NumberGroupComboBox.Text;
+            string Prep = main.PrepComboBox.Text;
+            string Dis = main.DisciplineComboBox.Text;
 
             MySqlConnectionStringBuilder mysqlCSB;
             mysqlCSB = new MySqlConnectionStringBuilder();
             mysqlCSB.Server = "localhost";//Сервер на котором находится база данных к которомой на необходимо подключиться
-            mysqlCSB.Database = "Diplom";//Имя базы данных которая нам необходима
+            mysqlCSB.Database = "twp";//Имя базы данных которая нам необходима
             mysqlCSB.UserID = "root";//Имя пользователя MySQL
-            mysqlCSB.Password = "123";//Пароль пользователя MySQL
+            mysqlCSB.Password = "1234";//Пароль пользователя MySQL
             mysqlCSB.CharacterSet = "utf8";//Используем кодировку для киррилицы utf8
 
             MySqlConnection con = new MySqlConnection();//Создаем объект для подключения к СУБД MySQL
@@ -92,7 +92,7 @@ namespace WPandCPL
             string MaxSubsection = "0";
             string MaxTheme = "0";
             //Расчет значение для запроса.
-            cmd.CommandText = "SELECT ID_Gr FROM groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
+            cmd.CommandText = "SELECT ID_Gr FROM twp.groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
             ID_Gr += cmd.ExecuteScalar();
             cmd.CommandText = "SELECT ID_Prep FROM lecturer WHERE FIO_Lecturer='" + Prep + "'";
             ID_Prep += cmd.ExecuteScalar();
@@ -337,9 +337,9 @@ namespace WPandCPL
             MySqlConnectionStringBuilder mysqlCSB;
             mysqlCSB = new MySqlConnectionStringBuilder();
             mysqlCSB.Server = "localhost";//Сервер на котором находится база данных к которомой на необходимо подключиться
-            mysqlCSB.Database = "Diplom";//Имя базы данных которая нам необходима
+            mysqlCSB.Database = "twp";//Имя базы данных которая нам необходима
             mysqlCSB.UserID = "root";//Имя пользователя MySQL
-            mysqlCSB.Password = "123";//Пароль пользователя MySQL
+            mysqlCSB.Password = "1234";//Пароль пользователя MySQL
             mysqlCSB.CharacterSet = "utf8";//Используем кодировку для киррилицы utf8
 
             MySqlConnection con = new MySqlConnection();//Создаем объект для подключения к СУБД MySQL
@@ -361,15 +361,15 @@ namespace WPandCPL
            
             MySqlCommand cmd = new MySqlCommand(sql, con);
             Plan main = this.Owner as Plan;
-            string Otdel = main.OtdelBox.Text;
-            string Sem = main.Sem_comboBox.Text;
-            string NumGr = main.NumGr_comboBox.Text;
-            string Prep = main.Prep_comboBox.Text;
-            string Dis = main.Dis_comboBox.Text;
+            string Otdel = main.OtdelComboBox.Text;
+            string Sem = main.SemestrComboBox.Text;
+            string NumGr = main.NumberGroupComboBox.Text;
+            string Prep = main.PrepComboBox.Text;
+            string Dis = main.DisciplineComboBox.Text;
             string ID_Gr = "";
             string ID_Prep = "";
             string ID_Pred = "";
-            cmd.CommandText = "SELECT ID_Gr FROM groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
+            cmd.CommandText = "SELECT ID_Gr FROM twp.groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
             ID_Gr += cmd.ExecuteScalar();
             cmd.CommandText = "SELECT ID_Prep FROM lecturer WHERE FIO_Lecturer='" + Prep + "'";
             ID_Prep += cmd.ExecuteScalar();
@@ -534,7 +534,7 @@ namespace WPandCPL
                 //Вариация заголовка и шапки таблицы документа Word 
                 if (main.rbCalendarPlan.Checked == true)
                 {
-                    doc.Content.Text = "Календарный план учебной дисциплины «" + main.Dis_comboBox.Text + "»";
+                    doc.Content.Text = "Календарный план учебной дисциплины «" + main.DisciplineComboBox.Text + "»";
                     doc.Paragraphs.Add(Type.Missing);
                     wordParag.Range.Tables.Add(wordParag.Range, rowCount, colCount, Type.Missing, Type.Missing);
                     wordTable = doc.Tables[1];
@@ -556,7 +556,7 @@ namespace WPandCPL
                 else
                 {
                     
-                    doc.Content.Text = "Тематический план и содержание учебной дисциплины «" + main.Dis_comboBox.Text + "»";
+                    doc.Content.Text = "Тематический план и содержание учебной дисциплины «" + main.DisciplineComboBox.Text + "»";
                     doc.Paragraphs.Add(Type.Missing);
                     
                     wordParag.Range.Tables.Add(wordParag.Range, rowCount, colCount, Type.Missing, Type.Missing);
@@ -704,11 +704,11 @@ namespace WPandCPL
                                 endCell = wordTable.Cell(i, 5).Range.End;
 
                                 
-                                string Otdel = main.OtdelBox.Text;
-                                string Sem = main.Sem_comboBox.Text;
-                                string NumGr = main.NumGr_comboBox.Text;
-                                string Prep = main.Prep_comboBox.Text;
-                                string Dis = main.Dis_comboBox.Text;
+                                string Otdel = main.OtdelComboBox.Text;
+                                string Sem = main.SemestrComboBox.Text;
+                                string NumGr = main.NumberGroupComboBox.Text;
+                                string Prep = main.PrepComboBox.Text;
+                                string Dis = main.DisciplineComboBox.Text;
                                 string sql = "SET names utf8";
                                 MySqlCommand cmd = new MySqlCommand(sql, Connetion());
                                 string ID_Gr = "";
@@ -718,7 +718,7 @@ namespace WPandCPL
                                 
                                
                                 //Расчет значение для запроса.
-                                cmd.CommandText = "SELECT ID_Gr FROM groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
+                                cmd.CommandText = "SELECT ID_Gr FROM twp.groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
                                 ID_Gr += cmd.ExecuteScalar();
                                 cmd.CommandText = "SELECT ID_Prep FROM lecturer WHERE FIO_Lecturer='" + Prep + "'";
                                 ID_Prep += cmd.ExecuteScalar();
@@ -764,11 +764,11 @@ namespace WPandCPL
                             begCell = wordTable.Cell(i, 2).Range.Start;
                             endCell = wordTable.Cell(i, 5).Range.End;
 
-                            string Otdel = main.OtdelBox.Text;
-                            string Sem = main.Sem_comboBox.Text;
-                            string NumGr = main.NumGr_comboBox.Text;
-                            string Prep = main.Prep_comboBox.Text;
-                            string Dis = main.Dis_comboBox.Text;
+                            string Otdel = main.OtdelComboBox.Text;
+                            string Sem = main.SemestrComboBox.Text;
+                            string NumGr = main.NumberGroupComboBox.Text;
+                            string Prep = main.PrepComboBox.Text;
+                            string Dis = main.DisciplineComboBox.Text;
                             string sql = "SET names utf8";
                             MySqlCommand cmd = new MySqlCommand(sql, Connetion());
                             string ID_Gr = "";
@@ -777,7 +777,7 @@ namespace WPandCPL
                           
                             string SumSelfHour = "";
                             //Расчет значение для запроса.
-                            cmd.CommandText = "SELECT ID_Gr FROM groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
+                            cmd.CommandText = "SELECT ID_Gr FROM twp.groups WHERE department='" + Otdel + "' and half_year=" + Sem + " and Num_Gr=" + NumGr + "";
                             ID_Gr += cmd.ExecuteScalar();
                             cmd.CommandText = "SELECT ID_Prep FROM lecturer WHERE FIO_Lecturer='" + Prep + "'";
                             ID_Prep += cmd.ExecuteScalar();
@@ -914,11 +914,11 @@ namespace WPandCPL
             Plan main = this.Owner as Plan;
             
             main.rbWorkProgramm.Enabled = true;
-            main.OtdelBox.Enabled = true;
-            main.Sem_comboBox.Enabled = true;
-            main.NumGr_comboBox.Enabled = true;
-            main.Prep_comboBox.Enabled = true;
-            main.Dis_comboBox.Enabled = true;
+            main.OtdelComboBox.Enabled = true;
+            main.SemestrComboBox.Enabled = true;
+            main.NumberGroupComboBox.Enabled = true;
+            main.PrepComboBox.Enabled = true;
+            main.DisciplineComboBox.Enabled = true;
         }
            
             
