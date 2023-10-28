@@ -43,7 +43,7 @@
             this.btn_DobPrep.TabIndex = 0;
             this.btn_DobPrep.Text = "Добавить преподавателя";
             this.btn_DobPrep.UseVisualStyleBackColor = true;
-            this.btn_DobPrep.Click += new System.EventHandler(this.btn_DobPrep_Click);
+            this.btn_DobPrep.Click += new System.EventHandler(this.btnAddLecturerClick);
             // 
             // btn_ExitDobPrep
             // 
@@ -67,17 +67,20 @@
             // 
             // FIOPrep_textBox
             // 
-            this.FIOPrep_textBox.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.FIOPrep_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.FIOPrep_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FIOPrep_textBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FIOPrep_textBox.Location = new System.Drawing.Point(216, 34);
             this.FIOPrep_textBox.Name = "FIOPrep_textBox";
-            this.FIOPrep_textBox.Size = new System.Drawing.Size(253, 22);
+            this.FIOPrep_textBox.Size = new System.Drawing.Size(253, 19);
             this.FIOPrep_textBox.TabIndex = 3;
-            this.FIOPrep_textBox.TextChanged += new System.EventHandler(this.FIOPrep_textBox_TextChanged);
+          
             // 
             // DobPrep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(507, 265);
             this.Controls.Add(this.FIOPrep_textBox);
             this.Controls.Add(this.label1);

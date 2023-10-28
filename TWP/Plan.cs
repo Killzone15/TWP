@@ -85,9 +85,17 @@ namespace TWP
             string columnName, queryString;
             queryString = "SELECT DISTINCT department FROM twp.groups;";
             columnName = "department";
-            DB db = new DB();
-
-            ComboBoxAddItems(OtdelComboBox, db.GetListFromQuery(queryString, columnName));
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
+            try
+            {
+                ComboBoxAddItems(OtdelComboBox, db.GetListFromQuery(queryString, columnName));
+            }
+            catch (Exception ee)
+            {
+                // если произошли ошибки покажем их
+                MessageBox.Show(ee.Message, "Ошибка подключения к базе данных!");
+                return;
+            }
 
         }
 
@@ -115,7 +123,7 @@ namespace TWP
             Otdel = OtdelComboBox.Text;
             queryString = $"SELECT DISTINCT half_year FROM twp.groups WHERE department='{Otdel}' ORDER BY half_year;";     
             columnName = "half_year";
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
 
             ComboBoxAddItems(SemestrComboBox, db.GetListFromQuery(queryString, columnName)); 
         }
@@ -142,7 +150,7 @@ namespace TWP
             Semestr = SemestrComboBox.Text;
             queryString = $"SELECT DISTINCT Num_Gr FROM twp.groups WHERE department='{Otdel}' AND half_year={Semestr};";
             columnName = "Num_Gr";
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
 
             ComboBoxAddItems(NumberGroupComboBox, db.GetListFromQuery(queryString, columnName));
         }
@@ -166,7 +174,7 @@ namespace TWP
             string NumberGroup = NumberGroupComboBox.Text;
 
             string idGrQueryString = $"SELECT Id_Gr FROM twp.groups WHERE department='{Otdel}' AND half_year={Semestr} AND Num_Gr={NumberGroup};";
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
             string ID_Gr = db.GetValueFromQuery(idGrQueryString);
             string fioLecturerQueryString = $"SELECT DISTINCT FIO_lecturer FROM lecturer,discipline WHERE discipline.Id_Prep=lecturer.Id_Prep and ID_Gr={ID_Gr}; ";
             string columnName = "FIO_lecturer";
@@ -206,7 +214,7 @@ namespace TWP
             string numberGroup = NumberGroupComboBox.Text;
 
             string idPrepQueryString = $"SELECT ID_Prep FROM lecturer WHERE FIO_Lecturer='{prep}'";
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
             string idPrep = db.GetValueFromQuery(idPrepQueryString);
             string idGrQueryString = $"SELECT ID_Gr FROM twp.groups WHERE department='{otdel}' AND half_year={semestr} AND Num_Gr={numberGroup};";
             string idGr = db.GetValueFromQuery(idGrQueryString);

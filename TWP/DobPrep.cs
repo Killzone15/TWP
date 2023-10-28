@@ -28,57 +28,27 @@ namespace TWP
 
         }
 
-        private void btn_DobPrep_Click(object sender, EventArgs e)
-        {
-            MySqlConnectionStringBuilder mysqlCSB; //Создаем объект класса MySQLConnectionStringBuilder
-            mysqlCSB = new MySqlConnectionStringBuilder();
-            mysqlCSB.Server = "localhost";//Сервер на котором находится база данных к которомой на необходимо подключиться
-            mysqlCSB.Database = "Diplom";//Имя базы данных которая нам необходима
-            mysqlCSB.UserID = "root";//Имя пользователя MySQL
-            mysqlCSB.Password = "";//Пароль пользователя MySQL
-            mysqlCSB.CharacterSet = "cp866";
-     
-            MySqlConnection con = new MySqlConnection();//Создаем объект для подключения к СУБД MySQL
-            con.ConnectionString = mysqlCSB.ConnectionString;//присваиваем значение строк объекта mysqlCSB к объекты для подключения con
-
-            try
-            {
-                con.Open();//Подключаемся к базе данных
-            }
-            catch (Exception ee)
-            {
-                // если произошли ошибки покажем их
-                MessageBox.Show(ee.ToString(), "Ошибка подключения к БД");
-                return;
-
-            }
-
-            //Выполняем запрос добавления преподавателя
-            
-           
-            string sql = "INSERT INTO lecturer (FIO_Lecturer)" +
+        private void btnAddLecturerClick(object sender, EventArgs e)
+        { 
+            string queryString = "INSERT INTO lecturer (FIO_Lecturer)" +
              "VALUES ('"+FIOPrep_textBox.Text+"')";
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            
+
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
            
             try
             {
-                cmd.ExecuteNonQuery(); ;//Выполняем запрос SQL
+                db.InsertToDatabase(queryString);//Выполняем запрос SQL
                 MessageBox.Show("Запись добавлена!");
             }
             catch (Exception ee)
             {
                 // если произошли ошибки покажем их
-                MessageBox.Show(ee.ToString(), "Ошибка добавления преподавателя");
+                MessageBox.Show(ee.Message, "Ошибка добавления преподавателя");
                 return;
 
             }
-            con.Close();//Закрываем подключение
-        }
-
-        private void FIOPrep_textBox_TextChanged(object sender, EventArgs e)
-        {
 
         }
+
     }
 }

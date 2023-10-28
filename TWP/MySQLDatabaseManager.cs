@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace TWP
 {
-    class DB
+    class MySQLDatabaseManager
     {
         readonly MySqlConnection connection = new MySqlConnection(
             "server=localhost;" +
@@ -35,7 +37,7 @@ namespace TWP
         {
             List<string> valuesList = new List<string>();
 
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
 
             db.OpenConnection();
 
@@ -60,7 +62,7 @@ namespace TWP
             
             string value;
 
-            DB db = new DB();
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
                 
             db.OpenConnection();
 
@@ -73,6 +75,14 @@ namespace TWP
                 
             return value;
             
+        }
+        public void InsertToDatabase(string queryString)
+        {
+            MySQLDatabaseManager db = new MySQLDatabaseManager();
+            db.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(queryString, db.GetConnection());
+            cmd.ExecuteNonQuery();
+            db.CloseConnection();
         }
 
     }

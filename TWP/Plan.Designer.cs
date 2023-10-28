@@ -79,31 +79,31 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // OtdelBox
+            // OtdelComboBox
             // 
             this.OtdelComboBox.DisplayMember = "1";
             this.OtdelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.OtdelComboBox.FormattingEnabled = true;
             this.OtdelComboBox.Location = new System.Drawing.Point(26, 57);
-            this.OtdelComboBox.Name = "OtdelBox";
+            this.OtdelComboBox.Name = "OtdelComboBox";
             this.OtdelComboBox.Size = new System.Drawing.Size(121, 21);
             this.OtdelComboBox.TabIndex = 1;
             this.OtdelComboBox.DropDown += new System.EventHandler(this.OtdelComboBoxDropDown);
             this.OtdelComboBox.SelectedIndexChanged += new System.EventHandler(this.OtdelBox_SelectedIndexChanged);
             // 
-            // Sem_comboBox
+            // SemestrComboBox
             // 
             this.SemestrComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SemestrComboBox.Enabled = false;
             this.SemestrComboBox.FormattingEnabled = true;
             this.SemestrComboBox.Location = new System.Drawing.Point(194, 57);
-            this.SemestrComboBox.Name = "Sem_comboBox";
+            this.SemestrComboBox.Name = "SemestrComboBox";
             this.SemestrComboBox.Size = new System.Drawing.Size(78, 21);
             this.SemestrComboBox.TabIndex = 2;
             this.SemestrComboBox.DropDown += new System.EventHandler(this.SemestrComboBoxDropDown);
             this.SemestrComboBox.SelectedIndexChanged += new System.EventHandler(this.Sem_comboBox_SelectedIndexChanged);
             // 
-            // NumGr_comboBox
+            // NumberGroupComboBox
             // 
             this.NumberGroupComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumberGroupComboBox.Enabled = false;
@@ -112,31 +112,31 @@
             "1",
             "2"});
             this.NumberGroupComboBox.Location = new System.Drawing.Point(318, 57);
-            this.NumberGroupComboBox.Name = "NumGr_comboBox";
+            this.NumberGroupComboBox.Name = "NumberGroupComboBox";
             this.NumberGroupComboBox.Size = new System.Drawing.Size(121, 21);
             this.NumberGroupComboBox.TabIndex = 3;
             this.NumberGroupComboBox.DropDown += new System.EventHandler(this.NumberGroupComboBoxDropDown);
             this.NumberGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.NumGr_comboBox_SelectedIndexChanged);
             // 
-            // Prep_comboBox
+            // PrepComboBox
             // 
             this.PrepComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PrepComboBox.Enabled = false;
             this.PrepComboBox.FormattingEnabled = true;
             this.PrepComboBox.Location = new System.Drawing.Point(485, 57);
-            this.PrepComboBox.Name = "Prep_comboBox";
+            this.PrepComboBox.Name = "PrepComboBox";
             this.PrepComboBox.Size = new System.Drawing.Size(167, 21);
             this.PrepComboBox.TabIndex = 4;
             this.PrepComboBox.DropDown += new System.EventHandler(this.PrepComboBoxDropDown);
             this.PrepComboBox.SelectedIndexChanged += new System.EventHandler(this.Prep_comboBox_SelectedIndexChanged);
             // 
-            // Dis_comboBox
+            // DisciplineComboBox
             // 
             this.DisciplineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DisciplineComboBox.Enabled = false;
             this.DisciplineComboBox.FormattingEnabled = true;
             this.DisciplineComboBox.Location = new System.Drawing.Point(685, 57);
-            this.DisciplineComboBox.Name = "Dis_comboBox";
+            this.DisciplineComboBox.Name = "DisciplineComboBox";
             this.DisciplineComboBox.Size = new System.Drawing.Size(211, 21);
             this.DisciplineComboBox.TabIndex = 5;
             this.DisciplineComboBox.DropDown += new System.EventHandler(this.DisciplineComboBoxDropDown);
@@ -152,7 +152,6 @@
             this.lbl_Otdel.Size = new System.Drawing.Size(82, 17);
             this.lbl_Otdel.TabIndex = 6;
             this.lbl_Otdel.Text = "Отделение";
-            
             // 
             // lbl_Sem
             // 
@@ -164,7 +163,6 @@
             this.lbl_Sem.Size = new System.Drawing.Size(64, 17);
             this.lbl_Sem.TabIndex = 7;
             this.lbl_Sem.Text = "Семестр";
-            
             // 
             // lbl_NumGr
             // 
@@ -176,7 +174,6 @@
             this.lbl_NumGr.Size = new System.Drawing.Size(101, 17);
             this.lbl_NumGr.TabIndex = 8;
             this.lbl_NumGr.Text = "Номер группы";
-            
             // 
             // lbl_Prep
             // 
@@ -188,7 +185,6 @@
             this.lbl_Prep.Size = new System.Drawing.Size(111, 17);
             this.lbl_Prep.TabIndex = 9;
             this.lbl_Prep.Text = "Преподаватель";
-            
             // 
             // label6
             // 
@@ -200,7 +196,6 @@
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Дисциплина";
-           
             // 
             // lbl_NameRasd
             // 
@@ -236,7 +231,7 @@
             // Dob_Prep
             // 
             this.Dob_Prep.Enabled = false;
-            this.Dob_Prep.Location = new System.Drawing.Point(686, 182);
+            this.Dob_Prep.Location = new System.Drawing.Point(685, 194);
             this.Dob_Prep.Name = "Dob_Prep";
             this.Dob_Prep.Size = new System.Drawing.Size(210, 30);
             this.Dob_Prep.TabIndex = 14;
@@ -247,7 +242,7 @@
             // Dob_Gr
             // 
             this.Dob_Gr.Enabled = false;
-            this.Dob_Gr.Location = new System.Drawing.Point(686, 234);
+            this.Dob_Gr.Location = new System.Drawing.Point(686, 250);
             this.Dob_Gr.Name = "Dob_Gr";
             this.Dob_Gr.Size = new System.Drawing.Size(210, 30);
             this.Dob_Gr.TabIndex = 15;
@@ -257,7 +252,7 @@
             // 
             // Support
             // 
-            this.Support.Location = new System.Drawing.Point(686, 286);
+            this.Support.Location = new System.Drawing.Point(686, 308);
             this.Support.Name = "Support";
             this.Support.Size = new System.Drawing.Size(210, 30);
             this.Support.TabIndex = 16;
@@ -267,7 +262,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(686, 334);
+            this.Exit.Location = new System.Drawing.Point(686, 357);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(210, 30);
             this.Exit.TabIndex = 17;
@@ -337,7 +332,7 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Уровень освоения:";
             // 
-            // lvlassimilation_comboBox
+            // LevelAssimilationComboBox
             // 
             this.LevelAssimilationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LevelAssimilationComboBox.Enabled = false;
@@ -347,7 +342,7 @@
             "Репродуктивны",
             "Продуктивный"});
             this.LevelAssimilationComboBox.Location = new System.Drawing.Point(167, 353);
-            this.LevelAssimilationComboBox.Name = "lvlassimilation_comboBox";
+            this.LevelAssimilationComboBox.Name = "LevelAssimilationComboBox";
             this.LevelAssimilationComboBox.Size = new System.Drawing.Size(121, 21);
             this.LevelAssimilationComboBox.TabIndex = 23;
             // 
@@ -531,7 +526,7 @@
             this.лToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.лToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("лToolStripMenuItem.Image")));
             this.лToolStripMenuItem.Name = "лToolStripMenuItem";
-            this.лToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
+            this.лToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.лToolStripMenuItem.Text = "Логин";
             this.лToolStripMenuItem.Click += new System.EventHandler(this.лToolStripMenuItem_Click);
             // 
@@ -541,7 +536,7 @@
             this.очиститьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.очиститьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("очиститьToolStripMenuItem.Image")));
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.очиститьToolStripMenuItem_Click);
             // 
@@ -551,7 +546,7 @@
             this.очиститьВсеToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.очиститьВсеToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("очиститьВсеToolStripMenuItem.Image")));
             this.очиститьВсеToolStripMenuItem.Name = "очиститьВсеToolStripMenuItem";
-            this.очиститьВсеToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
+            this.очиститьВсеToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.очиститьВсеToolStripMenuItem.Text = "Очистить все";
             this.очиститьВсеToolStripMenuItem.Click += new System.EventHandler(this.очиститьВсеToolStripMenuItem_Click);
             // 
@@ -561,7 +556,7 @@
             this.выходToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.выходToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("выходToolStripMenuItem1.Image")));
             this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(170, 24);
+            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
             this.выходToolStripMenuItem1.Text = "Выход";
             this.выходToolStripMenuItem1.Click += new System.EventHandler(this.выходToolStripMenuItem1_Click);
             // 
@@ -582,7 +577,7 @@
             this.просмотрСправкиToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.просмотрСправкиToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("просмотрСправкиToolStripMenuItem.Image")));
             this.просмотрСправкиToolStripMenuItem.Name = "просмотрСправкиToolStripMenuItem";
-            this.просмотрСправкиToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            this.просмотрСправкиToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.просмотрСправкиToolStripMenuItem.Text = "Просмотр справки";
             this.просмотрСправкиToolStripMenuItem.Click += new System.EventHandler(this.просмотрСправкиToolStripMenuItem_Click);
             // 
@@ -591,7 +586,7 @@
             this.оПрограммеWPCPLToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.оПрограммеWPCPLToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.оПрограммеWPCPLToolStripMenuItem.Name = "оПрограммеWPCPLToolStripMenuItem";
-            this.оПрограммеWPCPLToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            this.оПрограммеWPCPLToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.оПрограммеWPCPLToolStripMenuItem.Text = "О программе WPandCPL";
             this.оПрограммеWPCPLToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеWPCPLToolStripMenuItem_Click);
             // 

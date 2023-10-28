@@ -71,7 +71,7 @@
     <Compile Include="AboutWPandCPL.Designer.cs">
       <DependentUpon>AboutWPandCPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB.cs" />
+    <Compile Include="MySQLDatabaseManager.cs" />
     <Compile Include="DobGr.cs">
       <SubType>Form</SubType>
     </Compile>
